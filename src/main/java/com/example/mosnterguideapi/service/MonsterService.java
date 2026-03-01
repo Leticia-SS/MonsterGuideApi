@@ -20,7 +20,7 @@ public class MonsterService {
     }
 
     public Optional<Monster> getMonsterById(Long id) {
-        return Optional.ofNullable(monsterRepository.findById(id).orElse(null));
+        return monsterRepository.findById(id);
     }
 
     public void addMonster(Monster monster){
