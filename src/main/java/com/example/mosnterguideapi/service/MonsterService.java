@@ -28,6 +28,14 @@ public class MonsterService {
         monsterRepository.save(monster);
     }
 
+    public void updateMonster(Long id, Monster newMonster){
+        Optional<Monster> monster = monsterRepository.findById(id);
+        if (monster.isPresent()){
+            newMonster.setId(id);
+            monsterRepository.save(newMonster);
+        }
+    }
+
     public void deleteMonster(Long id) {
         monsterRepository.deleteById(id);
     }
