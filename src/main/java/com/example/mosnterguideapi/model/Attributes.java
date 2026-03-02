@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @Embeddable
 public class Attributes {
-    private Integer strengh;
+    private Integer strength;
     private Integer defense;
     private Integer life;
 }
