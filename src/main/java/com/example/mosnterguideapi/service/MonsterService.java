@@ -32,7 +32,7 @@ public class MonsterService {
         Optional<Monster> monster = monsterRepository.findById(id);
         if (monster.isPresent()){
             newMonster.setId(id);
-            monsterRepository.save(newMonster.get());
+            monsterRepository.save(newMonster);
         }
     }
 
