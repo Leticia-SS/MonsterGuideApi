@@ -1,3 +1,27 @@
 spring:
   application:
     name: MonsterGuideApi
+
+  datasource:
+    url: jdbc:h2:mem:webapp
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+    open-in-view: false
+    show-sql: false
+
+  h2:
+    console:
+      enabled: false
+
+server:
+  port: 9090
+
+logging:
+  level:
+    org.hibernate.orm.connections.pooling: ERROR
